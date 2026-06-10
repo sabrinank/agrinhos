@@ -1,0 +1,234 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --cor-principal: #2e7d32; /* Verde Agrinho */
+    --cor-secundaria: #81c784;
+    --cor-escura: #1b5e20;
+    --cor-fundo: #f4fbf4;
+    --cor-texto: #333;
+    --cor-branca: #ffffff;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navbar */
+header {
+    background-color: var(--cor-branca);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cor-principal);
+}
+
+.logo span {
+    color: var(--cor-secundaria);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-principal);
+}
+
+/* Hero Section (Banner) */
+.hero {
+    background: linear-gradient(rgba(27, 94, 32, 0.8), rgba(46, 125, 50, 0.6)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1470') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--cor-branca);
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--cor-branca);
+    color: var(--cor-principal);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+}
+
+/* Seção Sobre e Cards */
+.sobre {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 36px;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+}
+
+.sobre > p {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--cor-branca);
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-bottom: 5px solid var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+/* Seção Importância (Grid) */
+.importancia {
+    background-color: var(--cor-branca);
+    padding: 80px 0;
+}
+
+.imp-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.imp-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.imp-text h2 {
+    font-size: 36px;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+}
+
+.imp-decoracao {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.circulo-decorativo {
+    width: 200px;
+    height: 200px;
+    background-color: var(--cor-fundo);
+    border: 5px dashed var(--cor-principal);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Responsividade (Telas menores/Celulares) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+}
